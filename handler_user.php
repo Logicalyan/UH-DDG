@@ -1,6 +1,19 @@
 <?php
 
     include_once 'koneksi.php';
+    if (isset($_POST['login_user'])) {
+        $id = $_POST['ID'];
+        $name = $_POST['Nama'];
+        $email = $_POST['Email'];
+        $password = $_POST['Password'];
+
+        $insert = $koneksi -> query ("INSERT INTO tbl_adrian (ID, Nama, Email, Password)
+        VALUES ($id, '$name', '$email', '$password')");
+
+        if ($insert) {
+            echo ("Login Berhasil");
+        }
+    }
 
     if (isset($_POST['add_user'])) {
         $id = $_POST['ID'];

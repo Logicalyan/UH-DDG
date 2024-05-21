@@ -13,33 +13,48 @@
             * {
                 padding: 0;
                 margin: 0;
-                box-sizing: border-box;
                 font-family: 'Poppins', sans-serif;
+            }
+
+            .container{
+                margin-top:50px; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                flex-direction: column;
+            }
+
+            header{
+                margin-top: 50px;
+                text-align: center;
             }
         </style>
     </head>
 
-    <body style="margin-top:50px;display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <body>
         <?php 
             include_once 'koneksi.php';
             $data = $koneksi->query ("SELECT * FROM tbl_adrian");
         ?>
 
-        <table class="table" style="width: 80%;">
-            <thead>
-                <tr>
-                    <th>No</th>
-                    <th>ID</th>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <?php
+            <header><h1>DATA USER</h1>
+        </header>
+            <div class="container">
+
+                <table class="table" style="width: 80%;">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                <?php
                 foreach ($data as $item) {
-            ?>
+                ?>
+                
                 <tr>
-                    <th scope="row"><?= $no++;?></th>
                     <td><?php echo $item['ID'] ?></td>
                     <td><?php echo $item['Nama'] ?></td>
                     <td><?php echo $item['Email'] ?></td>
@@ -48,13 +63,15 @@
                         <a href="handler_user.php?delete=1&id=<?php echo $item['ID'] ?>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
-            <?php
+                <?php
                 }
-            ?>
-        </table>
-        <br>
+                ?>
+                </table>
 
-        <a href="user_add.php" class="btn btn-success">Add User</a>
+
+                <a href="user_add.php" class="btn btn-success">Add User</a>
+            </div>
+        
     </body>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
