@@ -1,7 +1,8 @@
 <?php
 
     include_once 'koneksi.php';
-    if (isset($_POST['login_user'])) {
+
+    if (isset($_POST['register_user'])) {
         $id = $_POST['ID'];
         $name = $_POST['Nama'];
         $email = $_POST['Email'];
@@ -11,7 +12,7 @@
         VALUES ($id, '$name', '$email', '$password')");
 
         if ($insert) {
-            echo ("Login Berhasil");
+            header ("Location: data_user.php");
         }
     }
 
@@ -36,7 +37,7 @@
         $password = $_POST['Password'];
 
         $update = $koneksi -> query ("UPDATE tbl_adrian SET 
-        Name = '$name', 
+        Nama = '$name', 
         Email = '$email', 
         Password = '$password'
         WHERE ID = $id

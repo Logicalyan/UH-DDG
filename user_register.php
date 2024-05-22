@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Login User</title>
+        <title>Register</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -30,11 +30,11 @@
     </head>
 
     <body style="min-height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-        <h1>LOGIN USER</h1>
+        <h1>DAFTAR</h1>
         <br>
 
         <form action="handler_user.php" method="post" style="width: 30%;">
-            <input type="hidden" name="login_user" value="1">
+            <input type="hidden" name="register_user" value="1">
 
             <div class="form-floating">
                 <input type="number" class="form-control" name="ID" id="floatingId" placeholder="ID">
@@ -43,8 +43,8 @@
             <br>
 
             <div class="form-floating">
-                <input type="text" class="form-control" name="Nama" id="floatingPassword" placeholder="Name">
-                <label for="floatingName">Name</label>
+                <input type="text" class="form-control" name="Nama" id="floatingPassword" placeholder="Nama">
+                <label for="floatingName">Nama</label>
             </div>
             <br>
 
@@ -61,8 +61,8 @@
             <br>
 
             <div style="display: flex; flex-direction: row; justify-content: space-between;">
-                <a href="data_user.php" class="btn btn-danger">Cancel</a>
-                <button type="submit" class="btn btn-success">Confirm</button>
+                <a href="data_user.php" class="btn btn-danger">Batal</a>
+                <button type="submit" class="btn btn-success">Konfirmasi</button>
             </div>
         </form>
     </body>

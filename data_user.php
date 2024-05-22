@@ -35,6 +35,7 @@
         <?php 
             include_once 'koneksi.php';
             $data = $koneksi->query ("SELECT * FROM tbl_adrian");
+            $no = 1;
         ?>
 
             <header><h1>DATA USER</h1>
@@ -44,6 +45,7 @@
                 <table class="table" style="width: 80%;">
                     <thead>
                         <tr>
+                            <th>No</th>
                             <th>ID</th>
                             <th>Nama</th>
                             <th>Email</th>
@@ -55,6 +57,7 @@
                 ?>
                 
                 <tr>
+                    <td><?php echo $no++ ?></td>
                     <td><?php echo $item['ID'] ?></td>
                     <td><?php echo $item['Nama'] ?></td>
                     <td><?php echo $item['Email'] ?></td>

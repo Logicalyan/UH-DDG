@@ -44,25 +44,25 @@
             <input type="hidden" name="update_user" value="1">
 
             <div class="form-floating">
-                <input type="number" class="form-control" name="id" value="<?php echo $data['ID'] ?>" placeholder="ID">
+                <input type="number" class="form-control" name="ID" value="<?php echo $data['ID'] ?>" placeholder="ID">
                 <label for="floatingId">ID</label>
             </div>
             <br>
 
             <div class="form-floating">
-                <input type="text" class="form-control" name="name" value="<?php echo $data['Nama'] ?>" placeholder="Name">
+                <input type="text" class="form-control" name="Nama" value="<?php echo $data['Nama'] ?>" placeholder="Nama">
                 <label for="floatingName">Name</label>
             </div>
             <br>
 
             <div class="form-floating">
-                <input type="email" class="form-control" name="email" value="<?php echo $data['Email'] ?>" placeholder="Email">
+                <input type="email" class="form-control" name="Email" value="<?php echo $data['Email'] ?>" placeholder="Email">
                 <label for="floatingEmail">Email</label>
             </div>
             <br>
 
             <div class="form-floating">
-                <input type="password" class="form-control" name="password" value="<?php echo $data['Password'] ?>" placeholder="Password">
+                <input type="password" class="form-control" name="Password" value="<?php echo $data['Password'] ?>" placeholder="Password">
                 <label for="floatingPassword">Password</label>
             </div>
             <br>
